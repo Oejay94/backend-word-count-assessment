@@ -71,22 +71,19 @@ def sec_item(item):
 def print_top(filename):
     word_count = {}
     with open(filename, "r") as f:
-        word_list = f.read().lower().split()
+         word_list = f.read().lower().split()
     for word in word_list:
         if word not in word_count:
             word_count[word] = 1
         else:
             word_count[word] += 1
-    for word in word_count:
-        print(word + ":" + str(word_count[word]))
-    return
-
+   
     word_list = []
     for key, value in word_count.items():
         word_list.append([key, value])
     word_list.sort(key=sec_item, reverse=True)
-
-    print(word_list[:20])
+    for item in word_list[:20]:
+        print(item[:20])
 
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
