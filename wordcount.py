@@ -83,7 +83,7 @@ def print_top(filename):
         word_list.append([key, value])
     word_list.sort(key=sec_item, reverse=True)
     for item in word_list[:20]:
-        print(item[:20])
+        print('{} : {}'.format(item[:20][0], item[:20][1]))
 
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
